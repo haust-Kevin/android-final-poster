@@ -1,6 +1,6 @@
 # Poster
 
-安卓大作业，一个手机端的接口测试工具，仿照 postman，基于腾讯的[QMUI](https://qmuiteam.com/android)组件库
+安卓大作业，一个手机端的接口测试工具，仿照 postman，使用了腾讯的[QMUI](https://qmuiteam.com/android)组件库
 
 HTTP库使用OKHTTP
 
