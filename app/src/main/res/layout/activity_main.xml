@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<com.qmuiteam.qmui.layout.QMUIConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qmuiteam.qmui.widget.section.QMUIStickySectionLayout
+        android:id="@+id/conn_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topbar" >
+
+    </com.qmuiteam.qmui.widget.section.QMUIStickySectionLayout>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topbar_height"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+
+    <com.qmuiteam.qmui.alpha.QMUIAlphaImageButton
+        android:id="@+id/btn_add_conn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/conn_list_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/add"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck,ImageContrastCheck" />
+
+</com.qmuiteam.qmui.layout.QMUIConstraintLayout>
+
+
+
+
+
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

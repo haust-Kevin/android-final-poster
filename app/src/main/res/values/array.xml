@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="request_method">
+        <item>POST</item>
+        <item>GET</item>
+    </string-array>
+
+</resources>

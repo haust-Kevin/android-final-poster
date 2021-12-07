@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.layout.QMUIConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    tools:context=".ui.components.request.fragment.RequestFirstFragment">
+
+    <com.qmuiteam.qmui.layout.QMUIConstraintLayout
+        android:id="@+id/QMUIConstraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.qmuiteam.qmui.layout.QMUILinearLayout
+            android:id="@+id/layout_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="#EBEFEF"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_send"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Spinner
+                android:id="@+id/sp_method"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/app_topbar_bg_color"
+                android:entries="@array/request_method"
+                android:spinnerMode="dropdown"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/et_request_req_url"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Enter request URL"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+        <com.qmuiteam.qmui.layout.QMUIButton
+            android:id="@+id/btn_send"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/request_send_button"
+            android:text="Send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+
+    </com.qmuiteam.qmui.layout.QMUIConstraintLayout>
+
+    <com.qmuiteam.qmui.layout.QMUIConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QMUIConstraintLayout2">
+
+        <com.qmuiteam.qmui.widget.tab.QMUITabSegment
+            android:id="@+id/request_edit_tab_segment"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            app:layout_constraintEnd_toEndOf="@+id/QMUIViewPager"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:qmui_tab_has_indicator="true"
+            app:qmui_tab_mode="fixed"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        <com.qmuiteam.qmui.widget.QMUIViewPager
+            android:id="@+id/request_edit_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/request_edit_tab_segment"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    </com.qmuiteam.qmui.layout.QMUIConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/QMUIConstraintLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/request_conn_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#80000000"
+            android:textSize="16sp"
+            tools:text="百度" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:text="\/"
+            android:textColor="#80000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/request_req_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:text="/query" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/request_conn_default_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/QMUIConstraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="www.baidu.com" />
+
+</com.qmuiteam.qmui.layout.QMUIConstraintLayout>

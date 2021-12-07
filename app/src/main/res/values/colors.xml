@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="connection_left_span_single">#97E5EF</color>
+    <color name="connection_left_span">#FF98EE</color>
+    <color name="request_method_get">#6CFF72</color>
+    <color name="request_method_post">#FFB74D</color>
+    <color name="request_send_button">#13AFF6</color>
+    <color name="editview_bg">#E3E3E3</color>
+
+    <color name="net_status_10x">#4b5cc4</color>
+    <color name="net_status_20x">#8BC34A</color>
+    <color name="net_status_30x">#eaff56</color>
+    <color name="net_status_40x">#ffffff</color>
+    <color name="net_status_50x">#ff2d51</color>
+</resources>
