@@ -15,10 +15,13 @@ HTTP库使用OKHTTP
   
 #### 请求
  - GET/POST
- - 支持请求参数
- - 支持请求体
+ - 支持请求参数  
+ - 支持请求体 （仅支持JSON请求体）
  - 支持添加请求头
- - 支持restful path参数
+ - 支持restful path参数  
+ &emsp;url path里直接用 `/prefix/path/:sample_param/suffix/path`  
+ &emsp;在params里可以直接 用`sample_param=sample_value`  
+ &emsp;app会自动判断是否作为restful参数并进行填充
 
 #### 响应体
  - 请求报文
